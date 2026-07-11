@@ -83,11 +83,11 @@ First, I tried moving a piece and watching the Network tab to see what the backe
 
 Next, I tried an illegal move, sliding the rook to A8 for an immediate "checkmate." The UI didn't take it kindly:
 
-<img width="380" height="157" alt="Client-side validation rejecting the illegal move" src="https://github.com/user-attachments/assets/af0ad03c-74f6-402b-b7ba-70448dd543ce" />
+<img width="380" height="157" alt="Client-side validation rejecting the illegal move" src="https://github.com/hamadsedrati/THM-WriteUps/blob/main/Easy/Fools%20Mate/img/illegalmove.png" />
 
 The key observation: **no request was ever sent to the server.** That confirmed the validation was happening entirely client-side. So I dug into `app.js` and found the exact function responsible for validating moves.
 
-<img width="457" height="67" alt="Client-side move validation function in app.js" src="https://github.com/user-attachments/assets/3b9768df-9384-4af1-bf89-7cbe15a639d7" />
+<img width="457" height="67" alt="Client-side move validation function in app.js" src="https://github.com/hamadsedrati/THM-WriteUps/blob/main/Easy/Fools%20Mate/img/client-sidecheck.png" />
 
 ---
 
@@ -95,7 +95,7 @@ The key observation: **no request was ever sent to the server.** That confirmed 
 
 With the validation function identified, the fix was simple: patch it in dev tools so it always returns `true`, then reset the board and replay the winning move.
 
-<img width="1170" height="450" alt="image" src="https://github.com/user-attachments/assets/b6a78167-7b9e-4347-bfe2-602698366a65" />
+<img width="1170" height="450" alt="image" src="https://github.com/hamadsedrati/THM-WriteUps/blob/main/Easy/Fools%20Mate/img/checkmate.png" />
 
 
 With the move-validation function forced to `return true`, the illegal checkmate was accepted, and the flag was served.
