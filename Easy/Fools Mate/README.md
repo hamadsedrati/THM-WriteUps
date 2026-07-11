@@ -71,7 +71,7 @@ Two open ports: `22` (SSH) and `80` (HTTP, Node.js/Express).
 
 The banner showed OpenSSH 9.6p1, which lined up with **CVE-2024-6387** ("regreSSHion"), so I tried exploiting it.
 
-<img width="885" height="156" alt="Failed SSH exploit attempt" src="https://github.com/user-attachments/assets/6789150d-9c64-4797-86b5-f70b203fda68" />
+<img width="885" height="156" alt="Failed SSH exploit attempt" src="https://github.com/hamadsedrati/THM-WriteUps/blob/main/Easy/Fools%20Mate/img/sshexploit.png" />
 
 as expected, no luck, the version was patched or just not vulnerable. Time to pivot to the actual intended path: the chess app.
 
