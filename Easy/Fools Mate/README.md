@@ -79,7 +79,7 @@ as expected, no luck, the version was patched or just not vulnerable. Time to pi
 
 First, I tried moving a piece and watching the Network tab to see what the backend was actually receiving.
 
-<img width="1915" height="321" alt="Network tab showing move request" src="https://github.com/user-attachments/assets/d2c8cf8a-fc1b-4f17-8ecd-84fe7190c8cb" />
+<img width="1915" height="321" alt="Network tab showing move request" src="https://github.com/hamadsedrati/THM-WriteUps/blob/main/Easy/Fools%20Mate/img/networktab.png" />
 
 Next, I tried an illegal move, sliding the rook to A8 for an immediate "checkmate." The UI didn't take it kindly:
 
